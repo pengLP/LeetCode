@@ -21,3 +21,4 @@ if __name__ == '__main__':
     s = Solution()
     str = ["h","e","l","l","o"]
     s.reverseString(str)
+    print("=====")
