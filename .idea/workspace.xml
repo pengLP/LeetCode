@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="551bf500-ac02-4312-b89a-084ad574a586" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leet123123.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetCode_344.py" beforeDir="false" afterPath="$PROJECT_DIR$/leetCode_344.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +188,7 @@
       <workItem from="1574167639543" duration="5632000" />
       <workItem from="1574216954775" duration="11364000" />
       <workItem from="1574302188608" duration="1622000" />
-      <workItem from="1574386888914" duration="4470000" />
+      <workItem from="1574386888914" duration="5174000" />
     </task>
     <servers />
   </component>
