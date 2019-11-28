@@ -8,4 +8,4 @@ class Solution:
         return Counter(s) == Counter(t)
 if __name__ == '__main__':
     s = Solution()
-    print(s.isAnagram("abc","abc"))
+    print(s.isAnagram("abc","abd"))
