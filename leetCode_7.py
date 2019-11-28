@@ -4,10 +4,9 @@
 """
 class Solution:
     def reverse(self, x: int) -> int:
-        print(x//10)
-        # while(x != 0):
-        #     print(x%10)
-        #     x//=10
+        while(x != 0):
+            print(x)
+            x//=10
 if __name__ == '__main__':
     s = Solution()
     s.reverse(-123)
