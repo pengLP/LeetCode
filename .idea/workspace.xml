@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="551bf500-ac02-4312-b89a-084ad574a586" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/leetCode_28.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetCode_38.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,8 +14,9 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/LeetCode$leetCode_344.coverage" NAME="leetCode_344 Coverage Results" MODIFIED="1574504812867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LeetCode$leetCode_278.coverage" NAME="leetCode_278 Coverage Results" MODIFIED="1574930302535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/LeetCode$leetCode_28.coverage" NAME="leetCode_28 Coverage Results" MODIFIED="1574931684666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LeetCode$leetCode_28.coverage" NAME="leetCode_28 Coverage Results" MODIFIED="1574932700792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LeetCode$huiwenStr.coverage" NAME="huiwenStr Coverage Results" MODIFIED="1574689001908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LeetCode$leetCode_38.coverage" NAME="leetCode_38 Coverage Results" MODIFIED="1574933906797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/LeetCode$leetCode_7.coverage" NAME="leetCode_7 Coverage Results" MODIFIED="1574911034014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -31,24 +32,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="12" />
+          <entry key="py" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="12" />
+          <entry key="Python" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="900" />
-          <entry key="txt" value="21" />
+          <entry key="py" value="1602" />
+          <entry key="txt" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="21" />
-          <entry key="Python" value="900" />
+          <entry key="PLAIN_TEXT" value="34" />
+          <entry key="Python" value="1602" />
         </counts>
       </usages-collector>
     </session>
@@ -81,11 +82,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leetCode_28.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="285">
+              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/leetCode_38.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="16" selection-start-line="16" selection-end-line="38" selection-end-column="18" />
+              <folding>
+                <marker date="1574933904933" expanded="true" signature="298:576" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -128,6 +141,7 @@
         <option value="$PROJECT_DIR$/leetCode_278.py" />
         <option value="$PROJECT_DIR$/chuji_search/leetCode_278.py" />
         <option value="$PROJECT_DIR$/leetCode_28.py" />
+        <option value="$PROJECT_DIR$/leetCode_38.py" />
       </list>
     </option>
   </component>
@@ -191,7 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.leetCode_28">
+  <component name="RunManager" selected="Python.leetCode_38">
     <configuration name="huiwenStr" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LeetCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -258,7 +272,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="leetCode_344" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="leetCode_38" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="LeetCode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -271,7 +285,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetCode_344.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/leetCode_38.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -303,19 +317,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.leetCode_344" />
       <item itemvalue="Python.leetCode_7" />
       <item itemvalue="Python.huiwenStr" />
       <item itemvalue="Python.leetCode_278" />
       <item itemvalue="Python.leetCode_28" />
+      <item itemvalue="Python.leetCode_38" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.leetCode_38" />
         <item itemvalue="Python.leetCode_28" />
         <item itemvalue="Python.leetCode_278" />
         <item itemvalue="Python.leetCode_7" />
         <item itemvalue="Python.huiwenStr" />
-        <item itemvalue="Python.leetCode_344" />
       </list>
     </recent_temporary>
   </component>
@@ -347,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574930070859</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add 28 实现strStr()">
+      <created>1574931732317</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574931732317</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -359,7 +380,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44219977" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40965208" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -403,7 +424,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add 278 第一个错误版本" />
-    <option name="LAST_COMMIT_MESSAGE" value="add 278 第一个错误版本" />
+    <MESSAGE value="add 28 实现strStr()" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 28 实现strStr()" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/LeetCode$leetCode_21.coverage" NAME="leetCode_21 Coverage Results" MODIFIED="1574219097623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -475,8 +497,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/leetCode_28.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="285">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leetCode_38.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="16" selection-start-line="16" selection-end-line="38" selection-end-column="18" />
+          <folding>
+            <marker date="1574933904933" expanded="true" signature="298:576" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
