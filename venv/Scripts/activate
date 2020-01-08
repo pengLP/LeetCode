@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\python\workspace\LeetCode\venv"
+VIRTUAL_ENV="E:\PycharmProjects\LeetCode\LeetCode\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

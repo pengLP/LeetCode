@@ -11,7 +11,6 @@ class Solution:
         y_q.put(y)
         while(x_q.empty() != True):
             x , y = x_q.get() , y_q.get()
-            print(str(x) + " === " + str(y) + " ===  " + str(route[x][y]) + "==="+str(x_q.qsize()))
             route[x][y] = 1
             # 当前点的上方节点入队
             if(x -1 >= 0 and map[x-1][y] == "1" and route[x-1][y] == 0):
