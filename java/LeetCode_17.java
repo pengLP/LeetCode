@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-    /*
-    * 
-    * */
+
 public class LeetCode_17 {
     public List<String> letterCombinations(String digits) {
         String map[] = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
