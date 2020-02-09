@@ -7,7 +7,7 @@ package BinarySearch;
 
 由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。
 * */
-public class LeetCode_69 {
+public class MySqrt {
     public int mySqrt(int x) {
         int  low = 0 , high = x/2 + 1;
         while (low <= high) {
@@ -23,7 +23,7 @@ public class LeetCode_69 {
     }
 
     public static void main(String[] args) {
-        LeetCode_69 s = new LeetCode_69();
+        MySqrt s = new MySqrt();
         System.out.println(s.mySqrt(9));
     }
 

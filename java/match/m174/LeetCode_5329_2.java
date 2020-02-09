@@ -1,7 +1,6 @@
-package match.m17;
+package match.m174;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static java.util.Map.Entry.comparingByValue;
 import static java.util.stream.Collectors.toMap;

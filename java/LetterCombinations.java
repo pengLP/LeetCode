@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class LeetCode_17 {
+public class LetterCombinations {
     public List<String> letterCombinations(String digits) {
         String map[] = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
         List<String> res = new ArrayList<>();
@@ -22,7 +22,7 @@ public class LeetCode_17 {
     }
 
     public static void main(String[] args) {
-        LeetCode_17 s = new LeetCode_17();
+        LetterCombinations s = new LetterCombinations();
         System.out.println(s.letterCombinations("23"));
     }
 }

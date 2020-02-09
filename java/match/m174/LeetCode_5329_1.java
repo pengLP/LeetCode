@@ -1,9 +1,7 @@
-package match.m17;
+package match.m174;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
 
 /**
  * 方阵中战斗力最弱的 K 行 显示英文描述

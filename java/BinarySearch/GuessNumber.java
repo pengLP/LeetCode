@@ -6,7 +6,7 @@ package BinarySearch;
  * 每次你猜错了，我会告诉你这个数字是大了还是小了。
  * 你调用一个预先定义好的接口 guess(int num)，它会返回 3 个可能的结果（-1，1 或 0）：
  * */
-public class LeetCode_374 {
+public class GuessNumber {
     public static int guess(int num) {
         int n = 6;
         if(num == n)
@@ -30,7 +30,7 @@ public class LeetCode_374 {
     }
 
     public static void main(String[] args) {
-        LeetCode_374 s = new LeetCode_374();
+        GuessNumber s = new GuessNumber();
         System.out.println(s.guessNumber(10));
     }
 }

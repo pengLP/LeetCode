@@ -10,7 +10,7 @@ package BinarySearch;
  *
  * 你可以假设 nums[-1] = nums[n] = -∞。
  * */
-public class LeetCode_162 {
+public class FindPeakElement {
 
     public int findPeakElement(int[] nums) {
         if(nums.length == 1)
@@ -35,7 +35,7 @@ public class LeetCode_162 {
     }
 
     public static void main(String[] args) {
-        LeetCode_162 s = new LeetCode_162();
+        FindPeakElement s = new FindPeakElement();
         System.out.println(s.findPeakElement(new int[]{1,2,1,3,5,6,4}));
     }
 }

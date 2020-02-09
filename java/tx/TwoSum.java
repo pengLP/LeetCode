@@ -8,7 +8,7 @@ import java.util.Map;
  *
  * 你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。
  * */
-public class LeetCode_1 {
+public class TwoSum {
 
     public int[] twoSum(int[] nums, int target) {
         Map<Integer , Integer> map = new HashMap<>();
@@ -28,7 +28,7 @@ public class LeetCode_1 {
     }
 
     public static void main(String[] args) {
-        LeetCode_1 s = new LeetCode_1();
+        TwoSum s = new TwoSum();
         int res[] = s.twoSum(new int[]{2, 7, 11, 15} , 9);
         for (int i = 0;i < res.length; i++)
             System.out.println(res[i]);

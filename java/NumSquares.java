@@ -1,5 +1,5 @@
 
-public class LeetCode_279 {
+public class NumSquares {
     public int numSquares(int n) {
         int dp[] = new int[n+1];
         for(int i = 1;i<= n; i++){
@@ -20,7 +20,7 @@ public class LeetCode_279 {
     }
 
     public static void main(String[] args) {
-        LeetCode_279 s = new LeetCode_279();
+        NumSquares s = new NumSquares();
         System.out.println(s.numSquares(13));
     }
 }
