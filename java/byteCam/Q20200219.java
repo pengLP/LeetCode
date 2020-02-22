@@ -28,21 +28,20 @@ public class Q20200219 {
         Scanner in = new Scanner(System.in);
         int N =in.nextInt() , K = in.nextInt();
         String S = in.next();
-        int S_int[] = new int[N+K-1];
+        int S1[] = new int[N+K-1];
         int res[] = new int[N];
         for (int i = 0;i < S.length(); i++) {
-            S_int[i] = S.charAt(i)  - '0';
+            S1[i] = S.charAt(i)  - '0';
         }
-        res[0] = S_int[0];
+        res[0] = S1[0];
         for (int i = 1;i < K; i++) {
-            res[i] = S_int[i] ^ S_int[i-1];
+            res[i] = S1[i] ^ S1[i-1];
         }
         for (int i = K;i < N; i++) {
-            res[i] = S_int[i] ^ res[i-K] ^ S_int[i-1];
+            res[i] = S1[i] ^ res[i-K] ^ S1[i-1];
         }
         for (int i = 0;i < res.length; i++) {
             System.out.println(res[i]);
         }
     }
-
 }
