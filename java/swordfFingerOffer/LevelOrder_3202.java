@@ -2,10 +2,7 @@ package swordfFingerOffer;
 
 import swordfFingerOffer.tree.TreeNode;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * 面试题32 - II. 从上到下打印二叉树 II
@@ -19,6 +16,7 @@ public class LevelOrder_3202 {
         List<List<Integer>> res = new ArrayList<>();
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
+        int tmp = 1;
         while (queue.size() != 0) {
             int size = queue.size();
             List<Integer> list = new ArrayList<>();
@@ -32,6 +30,7 @@ public class LevelOrder_3202 {
             }
             res.add(list);
         }
+
         return res;
     }
 

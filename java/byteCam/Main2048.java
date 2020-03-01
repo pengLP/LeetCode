@@ -1,10 +1,8 @@
+package byteCam;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-/**
-* Java实现2048矩阵操作
-*/
 
 public class Main2048 {
 
