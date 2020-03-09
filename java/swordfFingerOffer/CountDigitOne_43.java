@@ -9,18 +9,19 @@ package swordfFingerOffer;
 public class CountDigitOne_43 {
 
     public int countDigitOne(int n) {
-        int high = n;
-        int sum = 0;
-        while (high > 0) {
-            String tmp = String.valueOf(high);
-            for (int i  = 0;i < tmp.length(); i++) {
-                if (tmp.charAt(i) == '1'){
-                    sum++;
-                }
-            }
-            high--;
-        }
-        return sum;
+        if(n <= 0) return 0;
+        if (n < 10) return 1;
+        char c[] = String.valueOf(n).toCharArray();
+
+        int highNum = c[0] - '0';
+        int size = c.length;
+        int withoutHigh = n - highNum * (int)Math.pow(10 , size - 1);
+        int firstCount = highNum == 1 ? (withoutHigh + 1) : (int)Math.pow(10 , size - 1);
+
+        int otherCOunt = highNum * (size - 1) * (int)Math.pow(10 , size - 2);
+
+
+        return firstCount + otherCOunt + countDigitOne(withoutHigh);
     }
 
     public static void main(String[] args) {
