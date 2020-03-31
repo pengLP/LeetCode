@@ -26,9 +26,19 @@ public class LastRemaining_62 {
         return list.get(0);
     }
 
+    public int lastRemaining1(int n, int m) {
+
+        int f = 0;
+        for (int i = 2;i <= n + 1; i++) {
+            f = (m + f) % i;
+        }
+        return f;
+
+    }
+
     public static void main(String[] args) {
         LastRemaining_62 lastRemaining_62 = new LastRemaining_62();
-        lastRemaining_62.lastRemaining(10 ,17);
+        System.out.println(lastRemaining_62.lastRemaining1(10 ,17));
     }
 
 
