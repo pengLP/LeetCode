@@ -16,7 +16,7 @@ public class Main {
         for (int i = 0;i < nums.length; i++) {
             for (int j = i;j < nums.length; j++) {
                 int max = 0;
-                for (int k = i;k <= j;k++){
+                for (int k = i;k <= j;k++) {
                     max = Math.max(max , nums[k]);
                 }
                 sum += max;

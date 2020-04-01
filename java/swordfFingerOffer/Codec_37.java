@@ -56,6 +56,7 @@ public class Codec_37 {
         return node;
     }
 
+
     public TreeNode getTreeNode(String s) {
         if(s.equals("null"))
             return null;
