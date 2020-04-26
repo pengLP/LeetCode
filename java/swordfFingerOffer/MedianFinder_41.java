@@ -12,16 +12,20 @@ import java.util.PriorityQueue;
  * */
 public class MedianFinder_41 {
 
-    /** initialize your data structure here. */
-
     // count为奇数时进入小顶堆，为偶数时进入大顶堆
     private int count = 0;
     private PriorityQueue<Integer> minHeap;
     private PriorityQueue<Integer> maxHeap;
-    /** initialize your data structure here. */
+
+
     public MedianFinder_41() {
         minHeap = new PriorityQueue<>();
-        maxHeap = new PriorityQueue<>((a,b) -> {return b-a;});
+        maxHeap = new PriorityQueue<>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer integer, Integer t1) {
+                return t1 - integer;
+            }
+        });
     }
 
     public void addNum(int num) {
@@ -29,7 +33,7 @@ public class MedianFinder_41 {
             maxHeap.offer(num);
             int tmp = maxHeap.poll();
             minHeap.offer(tmp);
-        }else {
+        } else {
             minHeap.offer(num);
             int tmp = minHeap.poll();
             maxHeap.offer(tmp);
@@ -40,19 +44,20 @@ public class MedianFinder_41 {
     public double findMedian() {
         if(count %2 == 0){
             return new Double((minHeap.peek() + maxHeap.peek())) / 2;
-        }else{
+        } else{
             return new Double(minHeap.peek());
         }
     }
 
     public static void main(String[] args) {
         MedianFinder_41 medianFinder_41 = new MedianFinder_41();
-        medianFinder_41.addNum(10);
-        PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
-        minHeap.add(6);
-        minHeap.add(1);
-        minHeap.add(8);
-        System.out.println(minHeap.poll());
+        int n[] = new int[]{1,100,2,5,12,44,88,77,54,932,61};
+        for (int i =  0;i < n.length; i++) {
+            medianFinder_41.addNum(n[i]);
+        }
+        System.out.println(medianFinder_41.findMedian());
     }
+
+
 
 }
