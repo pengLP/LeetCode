@@ -1,4 +1,4 @@
-import java.util.Map;
+package byteCam.leetCode.array;
 
 /**
  * 695. 岛屿的最大面积
@@ -7,7 +7,7 @@ import java.util.Map;
  * 你可以假设二维矩阵的四个边缘都被水包围着。
  * 找到给定的二维数组中最大的岛屿面积。(如果没有岛屿，则返回面积为0。)
  * */
-public class MaxAreaOfIsland_695 {
+public class MaxAreaOfIsland {
 
     public int maxAreaOfIsland(int[][] grid) {
         int res = 0;

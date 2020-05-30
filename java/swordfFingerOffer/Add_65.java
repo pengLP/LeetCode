@@ -19,9 +19,13 @@ public class Add_65 {
         return a;
     }
 
+
+
+
     public static void main(String[] args) {
-        Add_65 add_65 = new Add_65();
-        System.out.println(add_65.add(1,1));
+//        Add_65 add_65 = new Add_65();
+//        System.out.println(add_65.add(1,1));
+
     }
 
 }

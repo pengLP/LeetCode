@@ -11,26 +11,27 @@ import java.util.concurrent.FutureTask;
 public class Mp
 {
 
-    public static void main(String[] args) {
-        int num[] = new int[]{1,2,3,4,5,6,7,8,9,10};
-        int txt = 0;
-        for (int i = 0;i < num.length -1 ; i++) {
-            boolean flag = false;
-            for (int j = 0;j < num.length -1 -i ; j++) {
-                txt++;
-                System.out.println(num[j] +"    "+ num[j + 1]);
-                if (num[j] > num[j + 1]) {
-                    int t = num[j];
-                    num[j] = num[j + 1];
-                    num[j + 1] = t;
-                    flag = true;
-                }
-            }
-            if (!flag)
-                break;
+    static int fun(int n) {
+        int f1 = 1, f2 = 1, f = f1+f2;
+        while (f < n) {
+            f1 = f2;
+            f2 = f;
+            f = f1 + f2;
         }
-        System.out.println(txt);
-        System.out.println(Arrays.toString(num));
+        return f;
+    }
+
+    public static void main(String[] args) {
+
+        float x = 2 , y;
+        if (x < 0)
+            y = 0;
+        else if(x < 5 && x == 0)
+            y = 1/(x + 2);
+        else if (x < 10)
+            y = 1/x;
+        else y = 10;
+        System.out.println(y);
     }
 
 }

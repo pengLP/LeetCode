@@ -11,34 +11,24 @@ import java.util.Arrays;
 public class LeetCode_5392 {
 
     public int maxScore(String s) {
-        if (s == null || s.length() == 1)
-            return 0;
-        if (s.length() == 2) {
-            if (s.charAt(0) == '0' && s.charAt(1) == '1')
-                return 2;
-            return 1;
+        int res = 0 , cur = 0;
+        for(int i = 0;i < s.length(); i++) {
+            if(s.charAt(i) == '1')
+                cur++;
         }
-        int res = 0;
-        for (int i = 0;i < s.length(); i++) {
-            int sum = 0;
-            for (int left = 0;left <= i; left++){
-                if (s.charAt(left) == '0')
-                    sum++;
-            }
-            for (int right = s.length() - 1; right > i; right--){
-                if (s.charAt(right) == '1')
-                    sum++;
-            }
-            res = Math.max(res , sum);
+        for(int i = 0;i < s.length() - 1; i++) {
+            if(s.charAt(i) == '0')
+                cur++;
+            else
+                cur--;
+            res = Math.max(cur , res);
         }
-
         return res;
-
     }
 
     public static void main(String[] args) {
         LeetCode_5392 leetCode_5392 = new LeetCode_5392();
-        System.out.println(leetCode_5392.maxScore("00"));
+        System.out.println(leetCode_5392.maxScore("011101"));
     }
 
 }
