@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
  * [2,3,4] 的中位数是 3
  * [2,3] 的中位数是 (2 + 3) / 2 = 2.5
  * 设计一个支持以下两种操作的数据结构：
- * */
+ */
 public class MedianFinder_295 {
 
     private PriorityQueue<Integer> minHeep;
@@ -16,7 +16,7 @@ public class MedianFinder_295 {
 
     public MedianFinder_295() {
         minHeep = new PriorityQueue<>();
-        maxHeap = new PriorityQueue<>((a,b) -> b-a);
+        maxHeap = new PriorityQueue<>((a, b) -> b - a);
         count = 0;
     }
 
@@ -26,7 +26,7 @@ public class MedianFinder_295 {
             minHeep.offer(num);
             int p = minHeep.poll();
             maxHeap.offer(p);
-        }else {
+        } else {
             maxHeap.offer(num);
             int p = maxHeap.poll();
             minHeep.offer(p);
@@ -37,7 +37,7 @@ public class MedianFinder_295 {
     public double findMedian() {
         if (count % 2 == 0) {
             return new Double((minHeep.peek() + maxHeap.peek()) / 2);
-        }else {
+        } else {
             return new Double(minHeep.peek());
         }
     }

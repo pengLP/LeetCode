@@ -40,7 +40,7 @@ public class TestSemaphore {
 
                         semp.release();
 
-                        System.out.println("-----------------"+semp.availablePermits());
+                        System.out.println("-----------------" + semp.availablePermits());
 
                     } catch (InterruptedException e) {
 

@@ -5,13 +5,14 @@ class Node2 {
     public Node2 left;
     public Node2 right;
 
-    public Node2() {}
+    public Node2() {
+    }
 
     public Node2(int _val) {
         val = _val;
     }
 
-    public Node2(int _val,Node2 _left,Node2 _right) {
+    public Node2(int _val, Node2 _left, Node2 _right) {
         val = _val;
         left = _left;
         right = _right;
@@ -38,6 +39,7 @@ public class TreeToDoublyList_36 {
         return head;
 
     }
+
     public void inOrder(Node2 root) {
         if (root == null)
             return;

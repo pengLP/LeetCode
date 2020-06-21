@@ -11,32 +11,32 @@ import java.util.Comparator;
  * 提交次数324
  * 题目难度Easy
  * 给你一个大小为 m * n 的方阵 mat，方阵由若干军人和平民组成，分别用 0 和 1 表示。
- *
+ * <p>
  * 请你返回方阵中战斗力最弱的 k 行的索引，按从最弱到最强排序。
- *
+ * <p>
  * 如果第 i 行的军人数量少于第 j 行，或者两行军人数量相同但 i 小于 j，那么我们认为第 i 行的战斗力比第 j 行弱。
- *
+ * <p>
  * 军人 总是 排在一行中的靠前位置，也就是说 1 总是出现在 0 之前。
- * */
+ */
 public class LeetCode_5329_1 {
 
     public int[] kWeakestRows(int[][] mat, int k) {
         int res[] = new int[k];
         int num[][] = new int[mat.length][2];
-        for (int i = 0;i < mat.length; i++) {
-            for(int j = 0;j < mat[i].length; j++) {
-                if(mat[i][j] == 1){
+        for (int i = 0; i < mat.length; i++) {
+            for (int j = 0; j < mat[i].length; j++) {
+                if (mat[i][j] == 1) {
                     num[i][0]++;
                 }
             }
         }
 
-        for (int i = 0;i < num.length; i++) {
+        for (int i = 0; i < num.length; i++) {
             num[i][1] = i;
         }
-        sort(num , new int[]{0,1});
-        for (int i = 0;i < k; i++) {
-            res[i]= num[i][1];
+        sort(num, new int[]{0, 1});
+        for (int i = 0; i < k; i++) {
+            res[i] = num[i][1];
         }
 
         return res;
@@ -64,6 +64,6 @@ public class LeetCode_5329_1 {
 
     public static void main(String[] args) {
         LeetCode_5329_1 s = new LeetCode_5329_1();
-        s.kWeakestRows(new int[][]{{1,1,0,0,0},{1,1,1,1,0},{1,0,0,0,0},{1,1,0,0,0},{1,1,1,1,1}},3);
+        s.kWeakestRows(new int[][]{{1, 1, 0, 0, 0}, {1, 1, 1, 1, 0}, {1, 0, 0, 0, 0}, {1, 1, 0, 0, 0}, {1, 1, 1, 1, 1}}, 3);
     }
 }

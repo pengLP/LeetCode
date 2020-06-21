@@ -4,11 +4,11 @@ import java.util.Map;
 /**
  * 460. LFU缓存
  * 设计并实现最不经常使用（LFU）缓存的数据结构。它应该支持以下操作：get 和 put。
- *
+ * <p>
  * get(key) - 如果键存在于缓存中，则获取键的值（总是正数），否则返回 -1。
  * put(key, value) - 如果键不存在，请设置或插入值。当缓存达到其容量时，
  * 它应该在插入新项目之前，使最不经常使用的项目无效。在此问题中，当存在平局（即两个或更多个键具有相同使用频率）时，最近最少使用的键将被去除。
- * */
+ */
 
 class LFUCache_460 {
     Map<Integer, Node> cache;
@@ -107,7 +107,8 @@ class Node {
     Node post;
     DoublyLinkedList doublyLinkedList;
 
-    public Node() {}
+    public Node() {
+    }
 
     public Node(int key, int value) {
         this.key = key;

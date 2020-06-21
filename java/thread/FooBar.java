@@ -4,11 +4,11 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class FooBar{
+public class FooBar {
 
     private int n;
-    private Lock lock=new ReentrantLock();
-    private Condition condition=lock.newCondition();
+    private Lock lock = new ReentrantLock();
+    private Condition condition = lock.newCondition();
     private boolean isEmpty = true;
 
 

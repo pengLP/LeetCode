@@ -5,7 +5,7 @@ import swordfFingerOffer.list.ListNode;
 /**
  * 面试题25. 合并两个排序的链表
  * 输入两个递增排序的链表，合并这两个链表并使新链表中的节点仍然是递增排序的。
- * */
+ */
 public class MergeTwoLists_25 {
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
@@ -17,7 +17,7 @@ public class MergeTwoLists_25 {
         if (l1.val < l2.val) {
             head = l1;
             l1 = l1.next;
-        }else {
+        } else {
             head = l2;
             l2 = l2.next;
         }
@@ -29,7 +29,7 @@ public class MergeTwoLists_25 {
                 r.next = l1;
                 l1.next = null;
                 l1 = p;
-            }else {
+            } else {
                 ListNode p = l2.next;
                 r.next = l2;
                 l2.next = null;

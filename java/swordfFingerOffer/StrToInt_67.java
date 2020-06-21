@@ -8,7 +8,7 @@ package swordfFingerOffer;
  * 该字符串除了有效的整数部分之后也可能会存在多余的字符，这些字符可以被忽略，它们对于函数不应该造成影响。
  * 注意：假如该字符串中的第一个非空格字符不是一个有效整数字符、字符串为空或字符串仅包含空白字符时，则你的函数不需要进行转换。
  * 在任何情况下，若函数不能进行有效的转换时，请返回 0。
- * */
+ */
 public class StrToInt_67 {
 
     public int strToInt(String str) {
@@ -17,20 +17,20 @@ public class StrToInt_67 {
         str = str.trim();
         String res = "";
         int i = 0;
-        if (str.charAt(0)== '+' || str.charAt(0) == '-'){
+        if (str.charAt(0) == '+' || str.charAt(0) == '-') {
             res += str.charAt(0);
             i++;
         }
 
-        for (;i < str.length(); i++) {
-            if (str.charAt(i) >= '0' && str.charAt(i) <= '9'){
-                res+= str.charAt(i);
-            }else {
+        for (; i < str.length(); i++) {
+            if (str.charAt(i) >= '0' && str.charAt(i) <= '9') {
+                res += str.charAt(i);
+            } else {
                 break;
             }
 
         }
-        if (res.length()== 0 || res.equals("+") || res.equals("-"))
+        if (res.length() == 0 || res.equals("+") || res.equals("-"))
             return 0;
         try {
             long ans = Long.parseLong(res);
@@ -39,8 +39,8 @@ public class StrToInt_67 {
             else if (ans < Integer.MIN_VALUE)
                 return Integer.MIN_VALUE;
             else
-                return (int)ans;
-        }catch (NumberFormatException e) {
+                return (int) ans;
+        } catch (NumberFormatException e) {
             if (res.charAt(0) == '-')
                 return Integer.MIN_VALUE;
             else

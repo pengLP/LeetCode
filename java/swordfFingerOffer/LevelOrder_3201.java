@@ -10,7 +10,7 @@ import java.util.Queue;
 /**
  * 面试题32 - I. 从上到下打印二叉树
  * 从上到下打印出二叉树的每个节点，同一层的节点按照从左到右的顺序打印。
- * */
+ */
 public class LevelOrder_3201 {
 
     public int[] levelOrder(TreeNode root) {
@@ -28,7 +28,7 @@ public class LevelOrder_3201 {
                 queue.add(treeNode.right);
         }
         int res[] = new int[list.size()];
-        for (int i = 0;i < res.length; i++)
+        for (int i = 0; i < res.length; i++)
             res[i] = list.get(i);
         return res;
     }

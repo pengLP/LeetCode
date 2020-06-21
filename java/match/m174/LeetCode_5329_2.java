@@ -13,19 +13,19 @@ import static java.util.stream.Collectors.toMap;
  * 提交次数938
  * 题目难度Medium
  * 给你一个整数数组 arr。你可以从中选出一个整数集合，并删除这些整数在数组中的每次出现。
- *
+ * <p>
  * 返回 至少 能删除数组中的一半整数的整数集合的最小大小。
- * */
+ */
 public class LeetCode_5329_2 {
 
     public int minSetSize(int[] arr) {
         int res = 0;
         int num = 0;
         int len = arr.length / 2;
-        Map<Integer , Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
         for (int s : arr) {
             Integer i = map.get(s);
-            if(i == null)
+            if (i == null)
                 map.put(s, 1);
             else
                 map.put(s, ++i);
@@ -35,7 +35,7 @@ public class LeetCode_5329_2 {
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             num += entry.getValue();
             res++;
-            if(num >= len)
+            if (num >= len)
                 return res;
         }
         return res;
@@ -62,6 +62,6 @@ public class LeetCode_5329_2 {
 
     public static void main(String[] args) {
         LeetCode_5329_2 s = new LeetCode_5329_2();
-        System.out.println(s.minSetSize(new int[]{3,3,3,3,5,5,5,2,2,7}));
+        System.out.println(s.minSetSize(new int[]{3, 3, 3, 3, 5, 5, 5, 2, 2, 7}));
     }
 }

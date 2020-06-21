@@ -10,11 +10,11 @@ public class Main6 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        for (int i = 0;i < n; i++) {
+        for (int i = 0; i < n; i++) {
             String str = in.next();
             if (bh(str).equals("")) {
                 System.out.println("Yes");
-            }else {
+            } else {
                 System.out.println("No");
             }
         }
@@ -27,14 +27,14 @@ public class Main6 {
         }
         char x[] = str.toCharArray();
         Character dest[] = new Character[n];
-        for (int i = 0;i < x.length; i++) {
+        for (int i = 0; i < x.length; i++) {
             dest[i] = Character.valueOf(x[i]);
         }
         List<Character> list = new ArrayList<>(Arrays.asList(dest));
         boolean hdl = true;
         while (hdl) {
             int bsize = list.size();
-            for (int i = 0;i < list.size() - 1; i++) {
+            for (int i = 0; i < list.size() - 1; i++) {
                 if (list.get(i) == list.get(i + 1)) {
                     list.remove(i);
                     list.remove(i);
@@ -44,12 +44,12 @@ public class Main6 {
             int esize = list.size();
             if (bsize == esize) {
                 hdl = false;
-            }else {
+            } else {
                 hdl = true;
             }
         }
         StringBuffer sbf = new StringBuffer();
-        for (int i = 0;i < list.size(); i++) {
+        for (int i = 0; i < list.size(); i++) {
             sbf.append(list.get(i));
         }
         return sbf.toString();

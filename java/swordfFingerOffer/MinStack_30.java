@@ -20,7 +20,7 @@ public class MinStack_30 {
     }
 
     public void pop() {
-        if (stack.size() > 0){
+        if (stack.size() > 0) {
             int x = stack.pop();
             if (minStack.size() > 0) {
                 if (minStack.peek() == x)

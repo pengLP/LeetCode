@@ -2,9 +2,10 @@ package match.m175;
 
 import java.util.HashMap;
 import java.util.Map;
+
 /**
- *  检查整数及其两倍数是否存在
- * */
+ * 检查整数及其两倍数是否存在
+ */
 public class LeetCode_5332 {
 
 /*    public boolean checkIfExist(int[] arr) {
@@ -27,15 +28,15 @@ public class LeetCode_5332 {
     }*/
 
     public boolean checkIfExist(int[] arr) {
-        Map<Integer,Integer> map = new HashMap<>();
-        for(int tempInt : arr){
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int tempInt : arr) {
             //Integer tempRst = map.get(tempInt);
-            if(map.keySet().contains(tempInt)){
+            if (map.keySet().contains(tempInt)) {
                 return true;
-            }else{
-                map.put(tempInt*2,tempInt);
-                if(tempInt%2 == 0){
-                    map.put(tempInt/2,tempInt);
+            } else {
+                map.put(tempInt * 2, tempInt);
+                if (tempInt % 2 == 0) {
+                    map.put(tempInt / 2, tempInt);
                 }
             }
         }
@@ -45,6 +46,6 @@ public class LeetCode_5332 {
 
     public static void main(String[] args) {
         LeetCode_5332 s = new LeetCode_5332();
-        System.out.println(s.checkIfExist(new int[]{-2,0,10,-19,4,6,-8}));
+        System.out.println(s.checkIfExist(new int[]{-2, 0, 10, -19, 4, 6, -8}));
     }
 }

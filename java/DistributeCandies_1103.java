@@ -6,8 +6,8 @@ public class DistributeCandies_1103 {
         int res[] = new int[num_people];
         int i = 0;
         while (candies > 0) {
-            res[i % num_people] += Math.min( i + 1  , candies);
-            candies -= Math.min( i + 1  , candies);
+            res[i % num_people] += Math.min(i + 1, candies);
+            candies -= Math.min(i + 1, candies);
             i++;
         }
         return res;
@@ -15,8 +15,8 @@ public class DistributeCandies_1103 {
 
     public static void main(String[] args) {
         DistributeCandies_1103 distributeCandies_1103 = new DistributeCandies_1103();
-        int res[] = distributeCandies_1103.distributeCandies(7,4);
-        for (Integer i:res) {
+        int res[] = distributeCandies_1103.distributeCandies(7, 4);
+        for (Integer i : res) {
             System.out.println(i);
         }
 

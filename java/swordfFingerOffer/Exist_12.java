@@ -10,12 +10,13 @@ import java.util.Stack;
  * ["s","f","c","s"],
  * ["a","d","e","e"]]
  * 但矩阵中不包含字符串“abfb”的路径，因为字符串的第一个字符b占据了矩阵中的第一行第二个格子之后，路径不能再次进入这个格子。
- * */
+ */
 
 class Node {
     int x;
     int y;
-    public Node(int x,int y) {
+
+    public Node(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -36,27 +37,27 @@ public class Exist_12 {
             return false;
         if (word == null || word.length() == 0)
             return true;
-        if(board.length * board[0].length < word.length())
+        if (board.length * board[0].length < word.length())
             return false;
 
         char c[] = word.toCharArray();
-        for (int i = 0;i < board.length; i++) {
-            for (int j = 0;j < board[i].length; j++) {
-                if (bfs(board , i,j,c,0))
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                if (bfs(board, i, j, c, 0))
                     return true;
             }
         }
         return false;
     }
 
-    public static boolean bfs(char[][] board , int x,int y,char c[],int k) {
+    public static boolean bfs(char[][] board, int x, int y, char c[], int k) {
 
         if (board.length <= x || x < 0 || board[0].length <= y || y < 0 || board[x][y] != c[k])
             return false;
         boolean visit[][] = new boolean[board.length][board[0].length];
         boolean flg = true;
         Stack<Node> stack = new Stack<Node>();
-        stack.push(new Node(x,y));
+        stack.push(new Node(x, y));
         visit[x][y] = true;
         k = 1;
         System.out.println("=============");
@@ -64,48 +65,48 @@ public class Exist_12 {
             if (c.length == 1)
                 return true;
             Node cur = stack.peek();
-            if (cur.x-1 >= 0 && !visit[cur.x-1][cur.y] && board[cur.x-1][cur.y] == c[k]) {
+            if (cur.x - 1 >= 0 && !visit[cur.x - 1][cur.y] && board[cur.x - 1][cur.y] == c[k]) {
                 System.out.println("上移");
-                stack.push(new Node(cur.x-1,cur.y));
-                visit[cur.x-1][cur.y] = true;
+                stack.push(new Node(cur.x - 1, cur.y));
+                visit[cur.x - 1][cur.y] = true;
                 ++k;
                 flg = true;
                 // 找到了符合要求的路径，则返回 true
                 if (k == c.length) return true;
-            }else if (cur.y-1 >= 0 && !visit[cur.x][cur.y-1] && board[cur.x][cur.y-1] == c[k]){
+            } else if (cur.y - 1 >= 0 && !visit[cur.x][cur.y - 1] && board[cur.x][cur.y - 1] == c[k]) {
                 System.out.println("左移");
-                stack.push(new Node(cur.x,cur.y-1));
-                visit[cur.x][cur.y-1] = true;
+                stack.push(new Node(cur.x, cur.y - 1));
+                visit[cur.x][cur.y - 1] = true;
                 flg = true;
                 ++k;
                 // 找到了符合要求的路径，则返回 true
                 if (k == c.length) return true;
-            }else if (cur.x+1 <board.length && !visit[cur.x+1][cur.y] && board[cur.x+1][cur.y] == c[k]) {
+            } else if (cur.x + 1 < board.length && !visit[cur.x + 1][cur.y] && board[cur.x + 1][cur.y] == c[k]) {
                 System.out.println("下移");
-                stack.push(new Node(cur.x+1 , cur.y));
-                visit[cur.x+1][cur.y] = true;
+                stack.push(new Node(cur.x + 1, cur.y));
+                visit[cur.x + 1][cur.y] = true;
                 flg = true;
                 ++k;
                 // 找到了符合要求的路径，则返回 true
                 if (k == c.length) return true;
-            }else if (cur.y+1 <board[0].length && !visit[cur.x][cur.y+1] && board[cur.x][cur.y+1] == c[k]) {
+            } else if (cur.y + 1 < board[0].length && !visit[cur.x][cur.y + 1] && board[cur.x][cur.y + 1] == c[k]) {
                 System.out.println("右移");
-                stack.push(new Node(cur.x,cur.y+1));
-                visit[cur.x][cur.y+1] = true;
+                stack.push(new Node(cur.x, cur.y + 1));
+                visit[cur.x][cur.y + 1] = true;
                 flg = true;
                 ++k;
                 // 找到了符合要求的路径，则返回 true
                 if (k == c.length) return true;
-            }else {
+            } else {
 
                 Node tmp = stack.pop();
-                if (flg){
+                if (flg) {
                     k--;
                     flg = false;
 
                 }
                 System.out.println("回退   " + board[tmp.x][tmp.y] + "    " + c[k] + "   "
-                +(cur.y+1 <board[0].length && !visit[cur.x][cur.y+1] && board[cur.x][cur.y+1] == c[k]));
+                        + (cur.y + 1 < board[0].length && !visit[cur.x][cur.y + 1] && board[cur.x][cur.y + 1] == c[k]));
             }
         }
         return false;
@@ -113,7 +114,7 @@ public class Exist_12 {
 
     public static void main(String[] args) {
 //        char c1[][] = new char[][]{{'a','b','c','e'},{'s','f','c','s'},{'a','d','e','f'}};
-        System.out.println(exist(new char[][]{{'a','b','c','e'},{'s','f','e','s'},{'a','d','e','e'}},"abceseeefs"));
+        System.out.println(exist(new char[][]{{'a', 'b', 'c', 'e'}, {'s', 'f', 'e', 's'}, {'a', 'd', 'e', 'e'}}, "abceseeefs"));
 
     }
 

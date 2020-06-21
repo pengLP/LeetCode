@@ -9,14 +9,14 @@ public class FindContinuousSequence_5702 {
     public int[][] findContinuousSequence(int target) {
         if (target < 3)
             return null;
-        int small = 1 , big = 2;
+        int small = 1, big = 2;
         int curr = small + big;
         List<int[]> res = new ArrayList<>();
-        int middle = (target+1)>>>1;
+        int middle = (target + 1) >>> 1;
         while (small < middle) {
-            if (curr == target){
+            if (curr == target) {
                 int tmp[] = new int[big - small + 1];
-                for (int i = small,j = 0;i <= big; i++,j++) {
+                for (int i = small, j = 0; i <= big; i++, j++) {
                     tmp[j] = i;
                 }
                 res.add(tmp);
@@ -24,16 +24,16 @@ public class FindContinuousSequence_5702 {
             while (curr > target && small < middle) {
                 curr -= small;
                 small++;
-                if (curr == target){
+                if (curr == target) {
                     int tmp[] = new int[big - small + 1];
-                    for (int i = small,j = 0;i <= big; i++,j++) {
+                    for (int i = small, j = 0; i <= big; i++, j++) {
                         tmp[j] = i;
                     }
                     res.add(tmp);
                 }
             }
             big++;
-            curr+=big;
+            curr += big;
         }
 
         return res.toArray(new int[0][]);

@@ -10,25 +10,25 @@
  * 直到它选择停止、到达棋盘的边缘或移动到同一方格来捕获该方格上颜色相反的卒。
  * 另外，车不能与其他友方（白色）象进入同一个方格。
  * 返回车能够在一次移动中捕获到的卒的数量。
- * */
+ */
 public class NumRookCaptures_999 {
 
     public int numRookCaptures(char[][] board) {
 
         int ans = 0;
-        int next[][] = new int[][]{{1,0},{-1,0},{0,1},{0,-1}};
-        int rx = -1 , ry = -1;
-        for (int i = 0;i < board.length; i++) {
-            for (int j = 0;j < board[i].length; j++) {
-                if (board[i][j] == 'R'){
+        int next[][] = new int[][]{{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+        int rx = -1, ry = -1;
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                if (board[i][j] == 'R') {
                     rx = i;
                     ry = j;
                     break;
                 }
             }
         }
-        System.out.println(rx + "    " +  ry);
-        for (int i = 0;i < next.length; i++) {
+        System.out.println(rx + "    " + ry);
+        for (int i = 0; i < next.length; i++) {
             for (int step = 0; ; step++) {
                 int tx = rx + step * next[i][0];
                 int ty = ry + step * next[i][1];

@@ -7,7 +7,7 @@ import java.util.function.IntConsumer;
 
 class ZeroEvenOdd {
     private int n;
-    private Semaphore s , s1 , s2;
+    private Semaphore s, s1, s2;
 
     public ZeroEvenOdd(int n) {
         this.n = n;
@@ -18,7 +18,7 @@ class ZeroEvenOdd {
 
     // printNumber.accept(x) outputs "x", where x is an integer.
     public void zero(IntConsumer printNumber) throws InterruptedException {
-        for (int i = 1;i <= n; i++) {
+        for (int i = 1; i <= n; i++) {
             System.out.println("s num：   " + s.availablePermits());
             System.out.println("s1 num：   " + s1.availablePermits());
             System.out.println("s2 num：   " + s2.availablePermits());
@@ -27,7 +27,7 @@ class ZeroEvenOdd {
 
             if ((i & 1) == 1) {
                 s2.release();
-            }else {
+            } else {
                 s1.release();
             }
 
@@ -35,7 +35,7 @@ class ZeroEvenOdd {
     }
 
     public void even(IntConsumer printNumber) throws InterruptedException {
-        for (int i = 2;i <= n;i+=2) {
+        for (int i = 2; i <= n; i += 2) {
             s1.acquire();
             printNumber.accept(i);
             s.release();
@@ -43,7 +43,7 @@ class ZeroEvenOdd {
     }
 
     public void odd(IntConsumer printNumber) throws InterruptedException {
-        for (int i = 1;i <= n; i+=2) {
+        for (int i = 1; i <= n; i += 2) {
             s2.acquire();
             printNumber.accept(i);
             s.release();

@@ -7,9 +7,9 @@
  * 假如第一个非空字符是数字，则直接将其与之后连续的数字字符组合起来，形成一个整数。
  * 该字符串在有效的整数部分之后也可能会存在多余的字符，那么这些字符可以被忽略，它们对函数不应该造成影响。
  * 注意：假如该字符串中的第一个非空格字符不是一个有效整数字符、字符串为空或字符串仅包含空白字符时，则你的函数不需要进行转换，即无法进行有效转换。
- *
+ * <p>
  * 在任何情况下，若函数不能进行有效的转换时，请返回 0 。
- * */
+ */
 public class MyAtoi_8 {
 
     public int myAtoi(String str) {
@@ -33,14 +33,14 @@ public class MyAtoi_8 {
                 res = res * 10 + tmp;
                 if (res > Integer.MAX_VALUE)
                     return Integer.MAX_VALUE;
-            }else {
+            } else {
                 res = res * 10 - tmp;
                 if (res < Integer.MIN_VALUE)
                     return Integer.MIN_VALUE;
             }
         }
 
-        return (int)res;
+        return (int) res;
     }
 
     public static void main(String[] args) {

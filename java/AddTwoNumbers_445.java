@@ -9,7 +9,7 @@ import java.util.List;
  * 给你两个 非空 链表来代表两个非负整数。数字最高位位于链表开始位置。
  * 它们的每个节点只存储一位数字。将这两数相加会返回一个新的链表。
  * 你可以假设除了数字 0 之外，这两个数字都不会以零开头。
- * */
+ */
 public class AddTwoNumbers_445 {
 
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
@@ -22,7 +22,7 @@ public class AddTwoNumbers_445 {
         ListNode curr = res;
         while (head1 != null || head2 != null) {
             int x = head1 == null ? 0 : head1.val;
-            int y = head2 == null ? 0: head2.val;
+            int y = head2 == null ? 0 : head2.val;
             int num = (x + y + carry) % 10;
             ListNode node = new ListNode(num);
             curr.next = node;
@@ -40,10 +40,10 @@ public class AddTwoNumbers_445 {
     }
 
     // 链表反转
-    public ListNode reverse(ListNode head){
+    public ListNode reverse(ListNode head) {
         if (head == null) return null;
         ListNode pre = null;
-        while (head != null){
+        while (head != null) {
             ListNode next = head.next;
             head.next = pre;
             pre = head;
@@ -67,7 +67,6 @@ public class AddTwoNumbers_445 {
         }
         System.out.println(list);
     }
-
 
 
 }

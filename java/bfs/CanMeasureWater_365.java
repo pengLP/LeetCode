@@ -10,8 +10,8 @@ import java.util.*;
  * 装满任意一个水壶
  * 清空任意一个水壶
  * 从一个水壶向另外一个水壶倒水，直到装满或者倒空
- * */
-class Node{
+ */
+class Node {
     int x;
     int y;
 
@@ -42,6 +42,7 @@ class Node{
                 '}';
     }
 }
+
 public class CanMeasureWater_365 {
 
     public boolean canMeasureWater(int x, int y, int z) {
@@ -51,7 +52,7 @@ public class CanMeasureWater_365 {
             return false;
 
         Queue<Node> queue = new LinkedList<>();
-        queue.add(new Node(0 , 0));
+        queue.add(new Node(0, 0));
         Set<Node> set = new HashSet<>();
         while (!queue.isEmpty()) {
             Node n = queue.poll();
@@ -62,12 +63,12 @@ public class CanMeasureWater_365 {
             if (remain_x == z || remain_y == z || remain_x + remain_y == z)
                 return true;
             set.add(n);
-            queue.add(new Node(x ,remain_y));
-            queue.add(new Node(remain_x , y));
-            queue.add(new Node(0 , remain_y));
-            queue.add(new Node(remain_x , 0));
-            queue.add(new Node(remain_x - Math.min(remain_x , y - remain_y) ,remain_y + Math.min(remain_x , y - remain_y)));
-            queue.add(new Node(remain_x + Math.min(x - remain_x , remain_y) , remain_y - Math.min(x - remain_x , remain_y)));
+            queue.add(new Node(x, remain_y));
+            queue.add(new Node(remain_x, y));
+            queue.add(new Node(0, remain_y));
+            queue.add(new Node(remain_x, 0));
+            queue.add(new Node(remain_x - Math.min(remain_x, y - remain_y), remain_y + Math.min(remain_x, y - remain_y)));
+            queue.add(new Node(remain_x + Math.min(x - remain_x, remain_y), remain_y - Math.min(x - remain_x, remain_y)));
         }
 
         return false;
@@ -75,7 +76,7 @@ public class CanMeasureWater_365 {
 
     public static void main(String[] args) {
         CanMeasureWater_365 canMeasureWater_365 = new CanMeasureWater_365();
-        System.out.println(canMeasureWater_365.canMeasureWater(2,6,5));
+        System.out.println(canMeasureWater_365.canMeasureWater(2, 6, 5));
     }
 
 }

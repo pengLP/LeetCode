@@ -13,7 +13,7 @@ public class LeetCode_5357 {
     }
 
     public void push(int x) {
-        if (this.top < this.maxSize-1) {
+        if (this.top < this.maxSize - 1) {
             this.top++;
             this.data[this.top] = x;
         }
@@ -31,12 +31,12 @@ public class LeetCode_5357 {
 
     public void increment(int k, int val) {
         if (k > this.top) {
-            for (int i = 0;i <= this.top; i++) {
+            for (int i = 0; i <= this.top; i++) {
                 this.data[i] += val;
             }
-        }else {
-            for (int i =0 ;i < k;i++) {
-                this.data[i]+= val;
+        } else {
+            for (int i = 0; i < k; i++) {
+                this.data[i] += val;
             }
         }
     }
@@ -49,8 +49,8 @@ public class LeetCode_5357 {
         stack.push(2);
         stack.push(3);
         stack.push(4);
-        stack.increment(5 , 100);
-        stack.increment(2 , 100);
+        stack.increment(5, 100);
+        stack.increment(2, 100);
         System.out.println(stack.pop());
         System.out.println(stack.pop());
         System.out.println(stack.pop());

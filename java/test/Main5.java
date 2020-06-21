@@ -10,7 +10,7 @@ public class Main5 {
         List<Integer> path = new ArrayList<>();
         while (x != 1) {
             path.add(x / 2);
-            x/=2;
+            x /= 2;
         }
         return path;
     }
@@ -19,9 +19,9 @@ public class Main5 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int num = in.nextInt();
-        for (int k = 0;k < num; k++) {
-            int x = in.nextInt() , s = in.nextInt();
-            if (s == 0 || x == 0){
+        for (int k = 0; k < num; k++) {
+            int x = in.nextInt(), s = in.nextInt();
+            if (s == 0 || x == 0) {
                 System.out.println(-1);
                 continue;
             }

@@ -8,10 +8,10 @@ import java.util.*;
  * 推文必须按照时间顺序由最近的开始排序。
  * follow(followerId, followeeId): 关注一个用户
  * unfollow(followerId, followeeId): 取消关注一个用户
- * */
+ */
 public class Twitter_355 {
 
-    class Tweet{
+    class Tweet {
         Integer tweetId;
         Integer time;
 
@@ -23,22 +23,22 @@ public class Twitter_355 {
 
     /**
      * 用户关注列表
-     * */
-    private Map<Integer , Set<Integer>> follows;
+     */
+    private Map<Integer, Set<Integer>> follows;
 
     /**
      * 用户推文列表
-     * */
-    private Map<Integer , LinkedList<Tweet>> tweets;
+     */
+    private Map<Integer, LinkedList<Tweet>> tweets;
 
     /**
      * 优先级队列，用来合并排序队列
-     * */
+     */
     private PriorityQueue<Tweet> maxHeap;
 
     /**
      * 时间戳
-     * */
+     */
     private Integer count;
 
     public Twitter_355() {
@@ -52,20 +52,24 @@ public class Twitter_355 {
         });
     }
 
-    /** Compose a new tweet. */
+    /**
+     * Compose a new tweet.
+     */
     public void postTweet(int userId, int tweetId) {
         if (tweets.containsKey(userId)) {
             LinkedList<Tweet> tweet = tweets.get(userId);
             tweet.add(new Tweet(tweetId));
-        }else {
+        } else {
             LinkedList<Tweet> tweet = new LinkedList<>();
             tweet.add(new Tweet(tweetId));
-            tweets.put(userId , tweet);
+            tweets.put(userId, tweet);
         }
 
     }
 
-    /** Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent. */
+    /**
+     * Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent.
+     */
     public List<Integer> getNewsFeed(int userId) {
         maxHeap.clear();
         Set<Integer> follow = follows.get(userId);
@@ -80,7 +84,9 @@ public class Twitter_355 {
         return null;
     }
 
-    /** Follower follows a followee. If the operation is invalid, it should be a no-op. */
+    /**
+     * Follower follows a followee. If the operation is invalid, it should be a no-op.
+     */
     public void follow(int followerId, int followeeId) {
         if (followeeId == followerId)
             return;
@@ -88,16 +94,18 @@ public class Twitter_355 {
         if (set == null) {
             set = new HashSet<>();
             set.add(followeeId);
-            follows.put(followeeId , set);
-        }else {
-            if (set.contains(followerId)){
+            follows.put(followeeId, set);
+        } else {
+            if (set.contains(followerId)) {
                 return;
             }
             set.add(followeeId);
         }
     }
 
-    /** Follower unfollows a followee. If the operation is invalid, it should be a no-op. */
+    /**
+     * Follower unfollows a followee. If the operation is invalid, it should be a no-op.
+     */
     public void unfollow(int followerId, int followeeId) {
         if (followeeId == followerId)
             return;

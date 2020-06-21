@@ -15,7 +15,7 @@ public class MaxQueue_5902 {
     }
 
     public int max_value() {
-        return deque.isEmpty()?-1:deque.peek();
+        return deque.isEmpty() ? -1 : deque.peek();
     }
 
     public void push_back(int value) {

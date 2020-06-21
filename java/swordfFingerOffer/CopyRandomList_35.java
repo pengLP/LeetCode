@@ -7,7 +7,7 @@ import java.util.Map;
  * 面试题35. 复杂链表的复制
  * 请实现 copyRandomList 函数，复制一个复杂链表。
  * 在复杂链表中，每个节点除了有一个 next 指针指向下一个节点，还有一个 random 指针指向链表中的任意节点或者 null。
- * */
+ */
 
 class Node1 {
     int val;
@@ -24,10 +24,10 @@ class Node1 {
 public class CopyRandomList_35 {
 
     public Node1 copyRandomList(Node1 head) {
-        Map<Node1 , Node1> map = new HashMap<>();
+        Map<Node1, Node1> map = new HashMap<>();
         Node1 p = head;
         while (p != null) {
-            map.put(p , new Node1(p.val));
+            map.put(p, new Node1(p.val));
             p = p.next;
         }
 

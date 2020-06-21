@@ -9,34 +9,34 @@ import java.util.Queue;
 /**
  * 面试题37. 序列化二叉树
  * 请实现两个函数，分别用来序列化和反序列化二叉树。
- * */
+ */
 public class Codec_37 {
 
     // Encodes a tree to a single string.
     public String serialize(TreeNode root) {
-        if(root == null)
+        if (root == null)
             return "[]";
         StringBuffer res = new StringBuffer("[");
         Queue<TreeNode> queue = new LinkedList();
         queue.add(root);
         while (!queue.isEmpty()) {
             TreeNode tmp = queue.poll();
-            if(tmp != null) {
+            if (tmp != null) {
                 res.append(tmp.val + ",");
                 queue.add(tmp.left);
                 queue.add(tmp.right);
-            }else {
+            } else {
                 res.append("null,");
             }
         }
-        return res.substring(0 , res.length() - 1) + "]";
+        return res.substring(0, res.length() - 1) + "]";
     }
 
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
         if (data == null && data.equals("[]"))
             return null;
-        String res = data.substring(1 , data.length() - 1);
+        String res = data.substring(1, data.length() - 1);
         String values[] = res.split(",");
         int index = 0;
         TreeNode node = getTreeNode(values[index++]);
@@ -58,7 +58,7 @@ public class Codec_37 {
 
 
     public TreeNode getTreeNode(String s) {
-        if(s.equals("null"))
+        if (s.equals("null"))
             return null;
         return new TreeNode(Integer.valueOf(s));
 

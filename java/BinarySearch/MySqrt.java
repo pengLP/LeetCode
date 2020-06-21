@@ -1,4 +1,5 @@
 package BinarySearch;
+
 /*
 * x 的平方根
 实现 int sqrt(int x) 函数。
@@ -9,15 +10,15 @@ package BinarySearch;
 * */
 public class MySqrt {
     public int mySqrt(int x) {
-        int  low = 0 , high = x/2 + 1;
+        int low = 0, high = x / 2 + 1;
         while (low <= high) {
             long mid = low + (high - low) / 2;
-            if(mid*mid == x)
-                return (int)mid;
-            if(mid*mid < x)
-                low = (int)(mid + 1);
-            if(mid*mid > x)
-                high = (int)(mid -1);
+            if (mid * mid == x)
+                return (int) mid;
+            if (mid * mid < x)
+                low = (int) (mid + 1);
+            if (mid * mid > x)
+                high = (int) (mid - 1);
         }
         return high;
     }

@@ -9,7 +9,7 @@ import java.util.IllegalFormatCodePointException;
  * '.' 匹配任意单个字符
  * '*' 匹配零个或多个前面的那一个元素
  * 所谓匹配，是要涵盖 整个 字符串 s的，而不是部分字符串。
- * */
+ */
 public class IsMatch_10 {
 
     public boolean isMatch(String s, String p) {
@@ -17,7 +17,7 @@ public class IsMatch_10 {
         int m = s.length(), n = p.length();
         boolean[][] dp = new boolean[m + 1][n + 1];
         dp[0][0] = true;
-        for (int i = 2; i <= n; i+= 2) {
+        for (int i = 2; i <= n; i += 2) {
             if (p.charAt(i - 1) == '*') {
                 dp[0][i] = dp[0][i - 2];
             }
@@ -39,7 +39,7 @@ public class IsMatch_10 {
         }
 
 
-        for (boolean[] row:dp) System.out.println(Arrays.toString(row));
+        for (boolean[] row : dp) System.out.println(Arrays.toString(row));
 
 
         return dp[m][n];
@@ -47,7 +47,7 @@ public class IsMatch_10 {
 
     public static void main(String[] args) {
         IsMatch_10 isMatch_10 = new IsMatch_10();
-        System.out.println(isMatch_10.isMatch("ab" , ".*c"));
+        System.out.println(isMatch_10.isMatch("ab", ".*c"));
     }
 
 }

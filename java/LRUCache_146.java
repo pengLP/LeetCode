@@ -8,8 +8,14 @@ public class LRUCache_146 {
         int value;
         DLinkedNode prev;
         DLinkedNode next;
-        public DLinkedNode() {}
-        public DLinkedNode(int _key, int _value) {key = _key; value = _value;}
+
+        public DLinkedNode() {
+        }
+
+        public DLinkedNode(int _key, int _value) {
+            key = _key;
+            value = _value;
+        }
     }
 
     private Map<Integer, DLinkedNode> cache = new HashMap<Integer, DLinkedNode>();
@@ -29,7 +35,7 @@ public class LRUCache_146 {
 
     public int get(int key) {
         DLinkedNode node = cache.get(key);
-        if (node == null){
+        if (node == null) {
             return -1;
         }
         moveToHead(node);
@@ -48,7 +54,7 @@ public class LRUCache_146 {
                 cache.remove(tail.key);
                 --size;
             }
-        }else {
+        } else {
             node.value = value;
             moveToHead(node);
         }
@@ -78,7 +84,7 @@ public class LRUCache_146 {
     }
 
     public static void main(String[] args) {
-        System.out.println((9+10) / 2);
+        System.out.println((9 + 10) / 2);
     }
 
 }

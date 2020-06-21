@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 
-
 public class PrintListInReversedOrder_06 {
 
     public ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
@@ -14,7 +13,7 @@ public class PrintListInReversedOrder_06 {
             listNode = listNode.next;
         }
         ArrayList<Integer> res = new ArrayList<>();
-        while (!stack.empty()){
+        while (!stack.empty()) {
             res.add(stack.pop());
         }
         return res;

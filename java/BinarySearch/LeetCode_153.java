@@ -1,14 +1,15 @@
 package BinarySearch;
+
 /**
- *  寻找旋转排序数组中的最小值
+ * 寻找旋转排序数组中的最小值
  * 假设按照升序排序的数组在预先未知的某个点上进行了旋转。
- *
+ * <p>
  * ( 例如，数组 [0,1,2,4,5,6,7] 可能变为 [4,5,6,7,0,1,2] )。
- *
+ * <p>
  * 请找出其中最小的元素。
- *
+ * <p>
  * 你可以假设数组中不存在重复元素。
- * */
+ */
 public class LeetCode_153 {
 
     public int findMin(int[] nums) {
@@ -17,8 +18,8 @@ public class LeetCode_153 {
         int left = 0, right = nums.length - 1;
         while (left < right) {
             int mid = left + (right - left) / 2;
-            if(nums[mid] <= nums[right])
-                right= mid;
+            if (nums[mid] <= nums[right])
+                right = mid;
             else
                 left = mid + 1;
         }
@@ -27,6 +28,6 @@ public class LeetCode_153 {
 
     public static void main(String[] args) {
         LeetCode_153 s = new LeetCode_153();
-        System.out.println(s.findMin(new int[]{3,3,1,3}));
+        System.out.println(s.findMin(new int[]{3, 3, 1, 3}));
     }
 }

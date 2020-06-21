@@ -8,10 +8,10 @@ package swordfFingerOffer.dataStructuresAndAlgorithms.backtracking;
  * 该格子。例如在下面的3×4的矩阵中包含一条字符串“bfce”的路径（路径中的字
  * 母用下划线标出）。但矩阵中不包含字符串“abfb”的路径，因为字符串的第一个
  * 字符b占据了矩阵中的第一行第二个格子之后，路径不能再次进入这个格子。
- * */
+ */
 public class StringPathInMatrix_12 {
 
-    public boolean hasPath(char matrix[][], int row, int col , char[] str) {
+    public boolean hasPath(char matrix[][], int row, int col, char[] str) {
 
         return false;
     }

@@ -7,7 +7,7 @@ import java.util.Stack;
  * pop() -- 删除栈顶的元素。
  * top() -- 获取栈顶元素。
  * getMin() -- 检索栈中的最小元素。
- * */
+ */
 public class MinStack_155 {
 
     private Stack<Integer> stack = new Stack();
@@ -24,7 +24,7 @@ public class MinStack_155 {
             int top = minStack.peek();
             if (x <= top)
                 minStack.push(x);
-        }else {
+        } else {
             minStack.push(x);
         }
         stack.add(x);

@@ -9,7 +9,7 @@ import javax.naming.NamingEnumeration;
  * 如果活细胞周围八个位置有超过三个活细胞，则该位置活细胞死亡；
  * 如果死细胞周围正好有三个活细胞，则该位置死细胞复活；
  * 根据当前状态，写一个函数来计算面板上所有细胞的下一个（一次更新后的）状态。下一个状态是通过将上述规则同时应用于当前状态下的每个细胞所形成的，其中细胞的出生和死亡是同时发生的。
- * */
+ */
 public class GameOfLife_289 {
 
     public void gameOfLife(int[][] board) {
@@ -17,13 +17,13 @@ public class GameOfLife_289 {
         int[] next = {0, 1, -1};
         if (board == null || board.length == 0)
             return;
-        int m = board.length , n = board[0].length;
-        for (int i = 0;i < m; i++) {
-            for (int j = 0;j < n; j++) {
+        int m = board.length, n = board[0].length;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
                 int lives = 0;
                 for (int nextH = 0; nextH < 3; nextH++) {
-                    for (int nextZ = 0;nextZ < 3; nextZ++) {
-                        if (!(next[nextH] == 0 && next[nextZ] == 0))  {
+                    for (int nextZ = 0; nextZ < 3; nextZ++) {
+                        if (!(next[nextH] == 0 && next[nextZ] == 0)) {
                             int x = i + next[nextH];
                             int y = j + next[nextZ];
                             if ((x >= 0 && x < m) && (y >= 0 && y < n) && Math.abs(board[x][y]) == 1) {
@@ -43,8 +43,8 @@ public class GameOfLife_289 {
             }
         }
 
-        for (int i = 0;i < m; i++) {
-            for (int j = 0;j < n; j++) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
                 if (board[i][j] == -1)
                     board[i][j] = 0;
                 if (board[i][j] == 2)
